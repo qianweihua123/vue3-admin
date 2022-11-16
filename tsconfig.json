@@ -5,6 +5,11 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": ["element-plus/global"],
     "jsx": "preserve",
     "resolveJsonModule": true,
     "isolatedModules": true,
