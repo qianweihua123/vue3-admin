@@ -2,22 +2,25 @@
  * @Author: qwh 15806293089@163.com
  * @Date: 2022-11-16 20:10:20
  * @LastEditors: qwh 15806293089@163.com
- * @LastEditTime: 2022-11-16 20:17:16
+ * @LastEditTime: 2022-11-18 16:12:20
  * @FilePath: /vue3-admin/src/layout/index.vue
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <template>
   <div class="app-wrapper">
-    <div class="sidebar-container">sidebar</div>
+    <div class="sidebar-container">
+      <sidebar></sidebar>
+    </div>
     <div class="main-container">
       <div class="header">
         <div class="navbar">navbar</div>
         <div class="tags-view">tagsview</div>
       </div>
-      <div class="app-main">
+      <!-- <div class="app-main">
         <h2>app main</h2>
         <router-view></router-view>
-      </div>
+      </div> -->
+      <app-main></app-main>
     </div>
   </div>
 </template>

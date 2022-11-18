@@ -13,17 +13,17 @@ import { createPinia } from "pinia"
 // import ElementPlus from "element-plus" // 这里我们直接全量引入
 // import "element-plus/dist/index.css"
 // 初始化css，重置css默认样式
-import "normalize.css/normalize.css";
+import "normalize.css/normalize.css"
 // 全局css
-import "@/styles/index.scss";
-import 'virtual:svg-icons-register'
+import "@/styles/index.scss"
+import "virtual:svg-icons-register"
 
 // 引入icon插件
-import initSvgIcon from "@/icons/index";
-import "virtual:svg-icons-register";
+import initSvgIcon from "@/icons/index"
+import "virtual:svg-icons-register"
 
 // 注册element-plus
-import installElementPlus from "./plugins/element";
+import installElementPlus from "./plugins/element"
 
 const app = createApp(App)
 app.use(installElementPlus)
