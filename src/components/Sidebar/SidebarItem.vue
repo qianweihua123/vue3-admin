@@ -1,13 +1,14 @@
 <template>
   <div class="sidebar-item-container" v-if="!item.meta || !item.meta.hidden">
     <!-- 如果有一个孩子，或者没孩子，或者有一个孩子但是被hidden了 -->
-    <template
+    <!-- <template
       v-if="
         theOnlyOneChildRoute &&
         (!theOnlyOneChildRoute.children ||
           theOnlyOneChildRoute.noShowingChildren)
       "
-    >
+    > -->
+    <template v-if="!alwaysShowRootMenu && theOnlyOneChildRoute">
       <!-- 如果没有meta属性意味着不必渲染了 -->
       <sidebar-item-link
         :to="resolvePath(theOnlyOneChildRoute.path)"
@@ -26,6 +27,7 @@
         </el-menu-item>
       </sidebar-item-link>
     </template>
+    <!-- </template> -->
     <!-- 多个子路由时 -->
     <el-sub-menu v-else :index="resolvePath(item.path)" popper-append-to-body>
       <template #title>
@@ -73,6 +75,11 @@ const showingChildNumber = computed(() => {
   })
   return children.length
 })
+
+const alwaysShowRootMenu = computed(
+  () => props.item.meta && props.item.meta.alwaysShow
+)
+
 // 是否有可渲染子路由
 const noShowingChildren: any = computed(() => showingChildNumber.value === 0)
 

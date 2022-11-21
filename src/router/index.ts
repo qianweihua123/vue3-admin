@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router"
 import Layout from "@/layout/index.vue"
 
 // 看做是异步路由
@@ -17,8 +17,8 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
           ),
         meta: {
           title: "Documentation",
-          icon: "user",
-          hidden: true
+          icon: "user"
+          // hidden: true
         }
       }
     ]
@@ -36,6 +36,7 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "Guide",
           icon: "user"
+          // activeMenu: "/documentation/index"
         }
       }
     ]
@@ -46,7 +47,8 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
     redirect: "/system/user",
     meta: {
       title: "System",
-      icon: "user"
+      icon: "user",
+      alwaysShow: true
     },
     children: [
       {
@@ -56,23 +58,23 @@ export const asyncRoutes: Array<RouteRecordRaw> = [
         meta: {
           title: "Menu Management"
         }
-      },
-      {
-        path: "role",
-        component: () =>
-          import(/* webpackChunkName: "role" */ "@/views/system/role.vue"),
-        meta: {
-          title: "Role Management"
-        }
-      },
-      {
-        path: "user",
-        component: () =>
-          import(/* webpackChunkName: "user" */ "@/views/system/user.vue"),
-        meta: {
-          title: "User Management"
-        }
       }
+      // {
+      //   path: "role",
+      //   component: () =>
+      //     import(/* webpackChunkName: "role" */ "@/views/system/role.vue"),
+      //   meta: {
+      //     title: "Role Management"
+      //   }
+      // },
+      // {
+      //   path: "user",
+      //   component: () =>
+      //     import(/* webpackChunkName: "user" */ "@/views/system/user.vue"),
+      //   meta: {
+      //     title: "User Management"
+      //   }
+      // }
     ]
   },
   {
@@ -117,6 +119,6 @@ const constantRoutes: Array<RouteRecordRaw> = [
 export const routes = [...constantRoutes, ...asyncRoutes]
 
 export default createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes
 })
