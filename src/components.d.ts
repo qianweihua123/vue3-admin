@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AppMain: typeof import('./components/AppMain.vue')['default']
+    Avatar: typeof import('./components/Avatar/index.vue')['default']
     Breadcrumb: typeof import('./components/Breadcrumb/index.vue')['default']
     Counter: typeof import('./components/Counter/index.vue')['default']
     ElBreadcrumb: typeof import('element-plus/es')['ElBreadcrumb']
@@ -33,5 +34,6 @@ declare module '@vue/runtime-core' {
     SidebarItemLink: typeof import('./components/Sidebar/SidebarItemLink.vue')['default']
     SizeSelect: typeof import('./components/SizeSelect/index.vue')['default']
     SvgIcon: typeof import('./components/SvgIcon/index.vue')['default']
+    TagsView: typeof import('./layout/components/TagsView/index.vue')['default']
   }
 }

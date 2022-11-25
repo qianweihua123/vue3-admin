@@ -19,26 +19,26 @@
 </template>
 
 <script lang="ts" setup>
-import { Size } from "@/plugins/element";
-import { useAppStore } from "@/stores/app";
-import { storeToRefs } from "pinia";
-const { proxy } = getCurrentInstance()!;
+import { Size } from "@/plugins/element"
+import { useAppStore } from "@/stores/app"
+import { storeToRefs } from "pinia"
+const { proxy } = getCurrentInstance()!
 const sizeOptions = ref([
   { label: "Default", value: "default" },
   { label: "Large", value: "large" },
-  { label: "Small", value: "small" },
-]);
-const size = computed(() => "default");
-const store = useAppStore();
+  { label: "Small", value: "small" }
+])
+const size = computed(() => "default")
+const store = useAppStore()
 const handleSize = (command: Size) => {
-  console.log(command);
+  console.log(command)
   store.setSize(command)
 
   proxy?.$message.success({
     type: "success",
-    message: "Switch Size Success",
-  });
-};
+    message: "Switch Size Success"
+  })
+}
 </script>
 <style lang="scss">
 .size-icon {

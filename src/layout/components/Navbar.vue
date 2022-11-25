@@ -5,13 +5,13 @@
     <div class="right-menu">
       <screenfull class="right-menu-item hover-effect"></screenfull>
 
-            <!-- element组件size切换 -->
+      <!-- element组件size切换 -->
       <el-tooltip content="Global Size" effect="dark" placement="bottom">
         <size-select class="right-menu-item hover-effect" />
       </el-tooltip>
 
+      <avatar />
     </div>
-
   </div>
 </template>
 
@@ -29,6 +29,10 @@ const toggleSidebar = () => {
 <style lang="scss" scoped>
 .navbar {
   display: flex;
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 21, 41, 0.08);
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+
   .right-menu {
     flex: 1;
     display: flex;
@@ -50,5 +54,4 @@ const toggleSidebar = () => {
     }
   }
 }
-
 </style>
