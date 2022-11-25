@@ -9,6 +9,8 @@
 import { App } from "vue"
 import { ElMessage, ElNotification, ElMessageBox } from "element-plus"
 
+export type Size = "default" | "large" | "small"
+
 // 默认自动导入组件插件，只会解析在模板中使用的组件，所以这里需要导入样式
 // 这里的样式也可以做到按需导入
 // import "element-plus/theme-chalk/el-message.css";

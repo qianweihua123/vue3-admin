@@ -36,10 +36,10 @@
     display: flex;
     flex-direction: column;
     .header {
-      background: cyan;
+      // background: cyan;
       .navbar {
         height: 50px;
-        background: #1890ff;
+        // background: #1890ff;
       }
       .tags-view {
         height: 34px;
