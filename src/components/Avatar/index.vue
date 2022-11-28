@@ -20,10 +20,10 @@
   </el-dropdown>
 </template>
 <script lang="ts" setup>
-import avatar from "@/assets/vue.svg";
+import avatar from "@/assets/vue.svg"
 const logout = () => {
-  console.log("退出登录");
-};
+  console.log("退出登录")
+}
 </script>
 
 <style lang="scss" scoped>

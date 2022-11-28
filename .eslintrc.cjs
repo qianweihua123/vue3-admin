@@ -22,6 +22,9 @@ module.exports = {
     "./.eslintrc-auto-import.json"
   ],
   overrides: [],
+  globals: {
+    defineOptions: "readonly",
+  },
   parser: "vue-eslint-parser", //解析.vue文件
   parserOptions: {
     parser: "@typescript-eslint/parser", // 解析.ts文件

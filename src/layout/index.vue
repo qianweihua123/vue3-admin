@@ -17,7 +17,6 @@
         <navbar></navbar>
 
         <tags-view></tags-view>
-
       </div>
       <!-- <div class="app-main">
         <h2>app main</h2>

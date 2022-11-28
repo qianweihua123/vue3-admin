@@ -9,7 +9,10 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["element-plus/global"],
+    "types": [
+      "element-plus/global",
+      "unplugin-vue-define-options/macros-global"
+    ],
     "jsx": "preserve",
     "resolveJsonModule": true,
     "isolatedModules": true,
